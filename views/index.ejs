@@ -46,46 +46,6 @@
   <body class="bg-white near-black relative">
     <iframe class="airtable-embed" src="https://airtable.com/embed/shrzF43LhbjvJbMGM?backgroundColor=purple&amp;layout=card&amp;viewControls=on" frameborder="0" onmousewheel allowfullscreen width="100%"></iframe>
     <a class="submit-link db blue pa2 f5 o-70 glow" href="https://airtable.com/shrlZdgh3CiDzf1UN" rel="noreferrer noopener" data-l10n-id="submit_daca_renewal_event">Submit a DACA Renewal event</a>
-    <!--
-    <div data-component="Offline" class="Offline">
-      <span class="Offline-message" data-l10n-id="offline_message">You are offline.</span>
-    </div>
-    <div class="States mw9 center flex"
-         data-component="States"
-         data-states-count="<%= states.length %>"
-         data-width="960"
-         data-height="500"
-         data-scale="1070"
-         data-map-data="<%= JSON.stringify(statesMapData) %>">
-      <div class="States-mapData" id="States-mapData"></div>
-      <div class="States-card">
-        <% for (var i = 0; i < states.length; i++) { %>
-          <% var state = states[i]; %>
-          <div class="States-cardWrapper<% if (state === stateActive) { %> isCurrent isSelected<% } %>"
-               data-state-slug="<%= state.slug %>"
-               data-state-name="<%= state.name %>">
-            <div class="States-titleWrapper">
-              <span class="States-label t-label"><%= state.name %></span>
-              <h1 class="States-number">
-              </h1>
-            </div>
-          </div>
-        <% } %>
-      </div>
-      <div class="States-scrollerWrapper">
-        <div class="States-scroller">
-          <div class="States-scrollerList">
-            <% for (var i = 0; i < states.length; i++) { %>
-              <% var state = states[i]; %>
-              <div class="States-scrollerItem">
-                <span class="States-scrollerItemNumber t-day"><%= state.getName() %></span>
-              </div>
-            <% } %>
-          </div>
-        </div>
-      </div>
-    </div>
-    -->
     <script src="<%= getVersionedPath('/main-compiled.js') %>"></script>
     <script src="https://www.googletagmanager.com/gtag/js?id=UA-107464083-1" async></script>  <!-- Global Site Tag (gtag.js) - Google Analytics -->
     <script>
