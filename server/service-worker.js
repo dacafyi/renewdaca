@@ -7,9 +7,7 @@ const CACHE_NAME = 'renewdaca-cache-v1';
 const urlsToCache = [
   '/',
   '{{stylesPath}}',
-  '{{scriptsPath}}',
-  '/fonts/swedensans-webfont.woff',
-  '/fonts/swedensans-webfont.woff2'
+  '{{scriptsPath}}'
 ];
 
 function addToCache (request, response) {
