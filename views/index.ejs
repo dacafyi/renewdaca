@@ -24,7 +24,7 @@
     <meta property="og:type" content="website">
     <meta property="og:title" content="<%= name %>">
     <meta property="og:description" content="<%= description %>">
-    <meta property="og:image" content="">
+    <meta property="og:image" content="<%= homepage %><%= getVersionedPath('/icons/android-chrome-256x256.png').substr(1) %>">
     <meta property="og:url" content="<%= homepage %>">
     <meta property="og:site_name" content="<%= name %>">
 
@@ -33,7 +33,7 @@
     <meta name="twitter:title" content="<%= name %>">
     <meta name="twitter:description" content="<%= description %>">
     <meta name="twitter:creator" content="<%= twitter_account %>">
-    <meta name="twitter:image" content="">
+    <meta name="twitter:image" content="<%= homepage %><%= getVersionedPath('/icons/android-chrome-256x256.png').substr(1) %>">
 
     <link rel="stylesheet" href="<%= getVersionedPath('/styles/vendor/tachyons.min.css') %>">
     <link rel="stylesheet" href="<%= getVersionedPath('/style.css') %>">
@@ -43,7 +43,10 @@
     <link rel="icon" type="image/png" href="<%= getVersionedPath('/icons/favicon-16x16.png') %>" sizes="16x16">
     <link rel="mask-icon" href="<%= getVersionedPath('/icons/safari-pinned-tab.svg') %>" color="<%= theme_color %>">
   </head>
-  <body class="bg-white near-black">
+  <body class="bg-white near-black relative">
+    <iframe class="airtable-embed" src="https://airtable.com/embed/shrzF43LhbjvJbMGM?backgroundColor=purple&amp;layout=card&amp;viewControls=on" frameborder="0" onmousewheel allowfullscreen width="100%"></iframe>
+    <a class="submit-link db blue pa2 f5 o-70 glow" href="https://airtable.com/shrlZdgh3CiDzf1UN" rel="noreferrer noopener" data-l10n-id="submit_daca_renewal_event">Submit a DACA Renewal event</a>
+    <!--
     <div data-component="Offline" class="Offline">
       <span class="Offline-message" data-l10n-id="offline_message">You are offline.</span>
     </div>
@@ -55,7 +58,6 @@
          data-scale="1070"
          data-map-data="<%= JSON.stringify(statesMapData) %>">
       <div class="States-mapData" id="States-mapData"></div>
-      <!-- <div class="States-tester"></div> -->
       <div class="States-card">
         <% for (var i = 0; i < states.length; i++) { %>
           <% var state = states[i]; %>
@@ -70,7 +72,6 @@
           </div>
         <% } %>
       </div>
-      <!--
       <div class="States-scrollerWrapper">
         <div class="States-scroller">
           <div class="States-scrollerList">
@@ -83,8 +84,8 @@
           </div>
         </div>
       </div>
-      -->
     </div>
+    -->
     <script src="<%= getVersionedPath('/main-compiled.js') %>"></script>
     <script>
       (function () {

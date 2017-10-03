@@ -4,6 +4,7 @@
   left: 0
   right: 0
   z-index: zIndex.offlineBanner
+  pointer-events: none
 
   display: flex
   justify-content: center
@@ -18,6 +19,7 @@
 
   &.isOffline
     opacity: 1
+    pointer-events: visible
 
   &-message
     color: white
