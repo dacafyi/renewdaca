@@ -1,7 +1,7 @@
 {
   "name": "renewdaca",
   "productName": "Renew DACA",
-  "description": "Renew DACA application if your work permit expires between September 5, 2017 and March 5, 2018. Applications must RECEIVED by October 5, 2017.",
+  "description": "Renew your DACA application if your work permit expires between September 5, 2017 and March 5, 2018. Applications must *received* by October 5, 2017.",
   "version": "1.0.0",
   "homepage": "https://renewdaca.org/",
   "scripts": {

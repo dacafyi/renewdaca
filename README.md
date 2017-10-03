@@ -2,7 +2,7 @@
 
 **[View live site!](https://renewdaca.org/)**
 
-Renew DACA application if your work permit expires between September 5, 2017 and March 5, 2018. Applications must RECEIVED by October 5, 2017.
+Renew your DACA application if your work permit expires between September 5, 2017 and March 5, 2018. Applications must *received* by October 5, 2017.
 
 
 ## Development

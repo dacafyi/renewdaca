@@ -22,7 +22,7 @@ let manifest = {
   default_locale_full: configJson.default_locale_full || packageJson.default_locale_full || configJson.defaultLocaleFull || packageJson.defaultLocaleFull || defaultLocaleFull,
   name: configJson.product_name || packageJson.product_name || configJson.productName || packageJson.productName || configJson.name || packageJson.name,
   short_name: configJson.short_name || configJson.shortName || packageJson.short_name || packageJson.shortName,
-  description: packageJson.description,
+  description: configJson.description || packageJson.description,
   theme_color: configJson.theme_color || packageJson.theme_color || configJson.themeColor || package.json.themeColor || defaultColor,
   background_color: configJson.background_color || packageJson.background_color || configJson.backgroundColor || package.json.backgroundColor,
   tile_color: configJson.tile_color || packageJson.tile_color || configJson.tileColor || packageJson.tileColor || defaultColor,
