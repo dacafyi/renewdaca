@@ -1,0 +1,26 @@
+.Info
+  position: fixed
+  left: 0
+  right: 0
+  bottom: 0
+  z-index: zIndex.info
+
+  &-link
+    display: block
+    margin: 0 auto 1rem
+    width: 25px
+    cursor: pointer
+
+    @media (min-width: breakpoint.medium)
+      width: 30px
+      margin-bottom: 2rem
+
+    svg rect,
+    svg polygon
+      fill: rgba(color.primary, .7)
+      // mix-blend-mode: multiply;
+      transition: fill 300ms ease.inQuad
+
+    &:hover svg rect,
+    &:hover svg polygon
+      fill: rgba(color.primary, .9)

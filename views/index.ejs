@@ -1,0 +1,115 @@
+<!doctype html>
+<html lang="<%= default_locale %>">
+  <head>
+    <meta charset="utf-8">
+
+    <title data-l10n-id="title_default"><%= name %></title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="canonical" href="<%= homepage %>">
+
+    <meta name="description" content="<%= description %>">
+    <meta name="theme-color" content="<%= theme_color %>">
+
+    <meta name="defaultLanguage" content="<%= default_locale_full %>">
+    <meta name="availableLanguages" content="<%= default_locale_full %>">
+    <link rel="localization" href="<%= getVersionedPath('/locales/{locale}.ftl') %>">
+
+    <link rel="manifest" href="/manifest.webmanifest">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+
+    <meta property="og:locale" content="en_US">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="<%= name %>">
+    <meta property="og:description" content="<%= description %>">
+    <meta property="og:image" content="">
+    <meta property="og:url" content="<%= homepage %>">
+    <meta property="og:site_name" content="<%= name %>">
+
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:site" content="<%= twitter_account %>">
+    <meta name="twitter:title" content="<%= name %>">
+    <meta name="twitter:description" content="<%= description %>">
+    <meta name="twitter:creator" content="<%= twitter_account %>">
+    <meta name="twitter:image" content="">
+
+    <link rel="stylesheet" href="<%= getVersionedPath('/styles/vendor/tachyons.min.css') %>">
+    <link rel="stylesheet" href="<%= getVersionedPath('/style.css') %>">
+
+    <link rel="apple-touch-icon" sizes="180x180" href="<%= getVersionedPath('/icons/apple-touch-icon.png') %>">
+    <link rel="icon" type="image/png" href="<%= getVersionedPath('/icons/favicon-32x32.png') %>" sizes="32x32">
+    <link rel="icon" type="image/png" href="<%= getVersionedPath('/icons/favicon-16x16.png') %>" sizes="16x16">
+    <link rel="mask-icon" href="<%= getVersionedPath('/icons/safari-pinned-tab.svg') %>" color="<%= theme_color %>">
+  </head>
+  <body class="bg-white near-black">
+    <div data-component="Offline" class="Offline">
+      <span class="Offline-message" data-l10n-id="offline_message">You are offline.</span>
+    </div>
+    <div class="States mw9 center flex"
+         data-component="States"
+         data-states-count="<%= states.length %>"
+         data-width="960"
+         data-height="500"
+         data-scale="1070"
+         data-map-data="<%= JSON.stringify(statesMapData) %>">
+      <div class="States-mapData" id="States-mapData"></div>
+      <!-- <div class="States-tester"></div> -->
+      <div class="States-card">
+        <% for (var i = 0; i < states.length; i++) { %>
+          <% var state = states[i]; %>
+          <div class="States-cardWrapper<% if (state === stateActive) { %> isCurrent isSelected<% } %>"
+               data-state-slug="<%= state.slug %>"
+               data-state-name="<%= state.name %>">
+            <div class="States-titleWrapper">
+              <span class="States-label t-label"><%= state.name %></span>
+              <h1 class="States-number">
+              </h1>
+            </div>
+          </div>
+        <% } %>
+      </div>
+      <!--
+      <div class="States-scrollerWrapper">
+        <div class="States-scroller">
+          <div class="States-scrollerList">
+            <% for (var i = 0; i < states.length; i++) { %>
+              <% var state = states[i]; %>
+              <div class="States-scrollerItem">
+                <span class="States-scrollerItemNumber t-day"><%= state.getName() %></span>
+              </div>
+            <% } %>
+          </div>
+        </div>
+      </div>
+      -->
+    </div>
+    <script src="<%= getVersionedPath('/main-compiled.js') %>"></script>
+    <script>
+      (function () {
+        /**
+         * Register Service Worker (for network resilience and offline capability).
+         */
+
+        /*
+        if ('serviceWorker' in navigator) {
+          navigator.serviceWorker.register('/sw.js').then(reg => {
+            console.log('Service Worker registered:', reg);
+          }).catch(err => {
+            console.log('Service Worker error:', err);
+          });
+        }
+
+        (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+        (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+        m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+        })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+        ga('create', 'UA-XXXXXXXX-Y', 'auto');
+        ga('send', 'pageview');
+        */
+      })();
+    </script>
+  </body>
+</html>

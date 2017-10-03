@@ -1,0 +1,72 @@
+
+@font-face {
+  font-family: 'sweden_sansregular'
+  src:  url('/fonts/swedensans-webfont.woff2') format('woff2'),
+        url('/fonts/swedensans-webfont.woff') format('woff')
+  font-weight: fontWeight.medium
+  font-style: normal
+}
+
+body
+  font-family: 'sweden_sansregular', sans-serif
+  font-size: 18px
+  -webkit-font-smoothing: antialiased;
+  color: color.primary
+
+h1
+  font-size: pxToRem(100)
+  //letter-spacing: -0.05em
+  font-weight: fontWeight.bold
+  line-height: 1
+
+  @media (min-width: breakpoint.medium)
+    font-size: 8rem
+
+  @media (min-width: breakpoint.large)
+    font-size: 10rem
+
+.t-label
+  font-size: .8rem
+  color: color.primary
+  font-weight: fontWeight.normal
+  text-transform: uppercase
+
+  @media (min-width: breakpoint.medium)
+    font-size: 1.1rem
+
+  @media (min-width: breakpoint.large)
+    font-size: 1.2rem
+
+.t-monthPeriodLabel
+  font-size: .7rem
+  font-weight: fontWeight.normal
+  color: color.primary
+  line-height: 1.7
+  text-transform: uppercase
+
+  @media (min-width: breakpoint.medium)
+    font-size: 1rem
+
+  @media (min-width: breakpoint.large)
+    font-size: 1.1rem
+
+.t-daysPeriod
+  font-size: 1.4rem
+  font-weight: fontWeight.medium
+  color: color.primary
+  line-height: 1.3
+
+  @media (min-width: breakpoint.medium)
+    font-size: 1.6rem
+
+  @media (min-width: breakpoint.large)
+    font-size: 1.8rem
+
+.t-day
+  font-size: 1rem
+  font-weight: fontWeight.medium
+  color: color.primary
+  line-height: 1
+
+  @media (min-width: breakpoint.large)
+    font-size: 1.5rem
